@@ -3,20 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auto Download</title>
+  <title>Download File</title>
 </head>
 <body>
-  <h1>Downloading your file...</h1>
+  <h1>Your download will start automatically...</h1>
   <script>
-    // Automatically triggers file download for a local file
-    const fileName = 'file.exe'; // File name (must be in the same folder as this HTML file)
-    const link = document.createElement('a');
-    link.href = fileName;
-    link.download = fileName; // The name of the file when downloaded
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.location.href = './file.exe';
   </script>
+  <noscript>
+    <p><a href="./file.exe">Click here to download the file.</a></p>
+  </noscript>
 </body>
 </html>
-
